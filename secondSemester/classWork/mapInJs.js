@@ -10,3 +10,4 @@ let expectedresult = wale.map((detail) =>{
 })
 
 console.log(expectedresult)
+
