@@ -1,4 +1,4 @@
-const {testScore,titan, square, assignBooks, filterAfternoonClasses, calculateTotalExpenses} = require ("./taskOne");
+const {testScore,titan, square, assignBooks, filterAfternoonClasses, calculateTotalExpenses} = require ("./taskOneAssignment");
 
 test('array has correct score', ()=>{
     studentScores  = [95,78,85,60,45,92,78,89,90,88]

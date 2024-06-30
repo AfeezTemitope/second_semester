@@ -1,45 +1,40 @@
-// function that filter the score that equals or greater than 70 using
-function testScore(result){
-    return result.filter(detail => detail >= 70)
-}
-
-//functions that increase the score by 5 using map
-function titan(result){
-    return result.map(detail => detail +5)
-}
-
-//function that return the square of numbers in a list
-function square(result){
-    return result.map(detail=> detail ** 2)
-}
-
-//function to distribute books with people
-function assignBooks(members, books) {
-    const assignedBooks = [];
-    for (const member of members) {
-      const bookIndex = members.indexOf(member);
-      const book = books[bookIndex]
-      assignedBooks.push(`${member} gets "${book}"`);
+const calculateArea = (width, breadth) => {
+    if (width < 0 || breadth < 0) {
+        return 0;
     }
-    return assignedBooks
-  }
-
-  // Filter afternoon classes (starting from 1:00 PM)
-  function filterAfternoonClasses(classTimings) {
-    return classTimings.filter((timing) => {
-        const hour = parseInt(timing.split(":")[0]);
-        return hour >= 1 && hour <= 5
-    });
+    return width * breadth;
+}
+const convertToFarenheit = (celsius)=> {
+    return celsius * 9/5 + 32
 }
 
-function calculateTotalExpenses(expenses) {
-    let total = 0;
-    for (let category in expenses) {
-        total += expenses[category]
+const isEven = (number) => number > 0 && number % 2 === 0;
+
+const leapYear =(year) =>{
+    if (year % 4 !== 0) {
+        return false;
+    } else if (year % 100 !== 0) {
+        return true;
+    } else if (year % 400 !== 0) {
+        return false;
+    } else {
+        return true;
     }
-    return total
 }
 
+const countVowelSounds = (word) => {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+    for (let i = 0; i < word.length; i++) {
+    const char = word.toLowerCase()[i];
+    if (vowels.includes(char)) {
+    count++;
+    }
+    }
+    return count;
+    }
+    
+    
 
-module.exports = {testScore, titan, square, assignBooks, filterAfternoonClasses, calculateTotalExpenses}
+module.exports = {calculateArea, convertToFarenheit, isEven, leapYear, countVowelSounds}
 
