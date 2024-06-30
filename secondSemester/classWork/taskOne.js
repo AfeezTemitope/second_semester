@@ -18,20 +18,28 @@ function assignBooks(members, books) {
     const assignedBooks = [];
     for (const member of members) {
       const bookIndex = members.indexOf(member);
-      const book = books[bookIndex];
+      const book = books[bookIndex]
       assignedBooks.push(`${member} gets "${book}"`);
     }
-    return assignedBooks;
+    return assignedBooks
   }
 
   // Filter afternoon classes (starting from 1:00 PM)
   function filterAfternoonClasses(classTimings) {
     return classTimings.filter((timing) => {
         const hour = parseInt(timing.split(":")[0]);
-        return hour >= 1 && hour <= 5;
+        return hour >= 1 && hour <= 5
     });
 }
 
+function calculateTotalExpenses(expenses) {
+    let total = 0;
+    for (let category in expenses) {
+        total += expenses[category]
+    }
+    return total
+}
 
-module.exports = {testScore, titan, square, assignBooks, filterAfternoonClasses}
+
+module.exports = {testScore, titan, square, assignBooks, filterAfternoonClasses, calculateTotalExpenses}
 

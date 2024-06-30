@@ -1,4 +1,4 @@
-const {testScore,titan, square, assignBooks, filterAfternoonClasses} = require ("./taskOne");
+const {testScore,titan, square, assignBooks, filterAfternoonClasses, calculateTotalExpenses} = require ("./taskOne");
 
 test('array has correct score', ()=>{
     studentScores  = [95,78,85,60,45,92,78,89,90,88]
@@ -48,4 +48,16 @@ test('test that the timing can be filtered for afternoon', ()=>{
     const allClassTimings = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM"];
     const noonClasses = ["1:00 PM", "3:00 PM", "5:00 PM"]
     expect(filterAfternoonClasses(allClassTimings)).toEqual(noonClasses)
+})
+
+test('test for expense ',()=>{
+    const davidExpenses = {
+        "groceries": 150,
+        "dining out": 100,
+        "transportation": 50,
+        "entertainment": 80
+    }
+    const totalExpense = calculateTotalExpenses(davidExpenses)
+    expect(totalExpense).toBe(380)
+
 })
