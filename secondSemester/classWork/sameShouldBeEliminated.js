@@ -20,6 +20,19 @@ function removeDuplicates(arr) {
     }
     return result;
   }
+
+  function removeDuplicatesBeginner(arr) {
+    const concatenatedArray = arr.concat(); 
+    return concatenatedArray.filter((item, pos) => concatenatedArray.indexOf(item) === pos);
+}
+
+function removeDuplicatesPro(arr) {
+  return arr.filter((obj, index, self) => {
+      return index === self.findIndex((otherObj) => obj.className === otherObj.className);
+  });
+}
+
+
   
 
 
