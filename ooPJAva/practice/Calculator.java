@@ -1,6 +1,6 @@
 public class Calculator {
 
-    
+
     public static double add(double a, double b) {
         return a + b;
     }
@@ -15,7 +15,7 @@ public class Calculator {
         return a * b;
     }
 
-    
+
     public static String divide(double a, double b) {
         if (b != 0) {
             return String.valueOf(a / b);
@@ -23,4 +23,5 @@ public class Calculator {
             return "Error: Division by zero!";
         }
     }
+}
 

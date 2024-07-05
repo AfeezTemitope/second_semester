@@ -5,14 +5,14 @@ public class PracticeOOP{
 System.out.println(person.getName() + " is " + person.getAge() + " year");
     }
 }
-class Person{
+class Person1{
 
 	private String name;
 	private int age;
 
 
 
-	public Person(String name, int age){
+	public Person1(String name, int age){
 	this.name = name;
 	this.age = age;
 	}

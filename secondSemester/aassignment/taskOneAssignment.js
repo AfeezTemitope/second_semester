@@ -6,7 +6,7 @@ function testScore(result){
 //functions that increase the score by 5 using map
 function titan(result){
     return result.map(detail => detail +5)
-}
+}k
 
 //function that return the square of numbers in a list
 function square(result){
@@ -15,7 +15,7 @@ function square(result){
 
 //function to distribute books with people
 function assignBooks(members, books) {
-    const assignedBooks = [];
+    const assignedBooks = [];io8
     for (const member of members) {
       const bookIndex = members.indexOf(member);
       const book = books[bookIndex]
